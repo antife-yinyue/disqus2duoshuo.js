@@ -49,7 +49,7 @@ fs.readFile(xmlPath, function(err, xmlData) {
         author_name: data.author.name,
         author_email: data.author.email,
         ip: data.ipAddress,
-        created_at: moment(data.createdAt, 'YYYY-MM-DD HH:mm:ss')
+        created_at: moment(data.createdAt).format('YYYY-MM-DD HH:mm:ss')
       })
     }
   })

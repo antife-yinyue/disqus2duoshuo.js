@@ -1,4 +1,6 @@
-## 将评论从 DISQUS 导到本地
+## 详细步骤
+
+### 1、将评论从 DISQUS 导到本地
 
 首先登录 DISQUS <https://disqus.com/admin/login/>，然后按照步骤操作：
 
@@ -6,14 +8,14 @@
 
 收到邮件后，解压出 XML 文件
 
-## 安装 NodeJS
+### 2、安装 NodeJS
 
 ```sh
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 nvm install v0.10
 ```
 
-## 安装 disqus2duoshuo.js
+### 3、安装 disqus2duoshuo.js
 
 ```sh
 git clone https://github.com/jsw0528/disqus2duoshuo.js.git
@@ -21,7 +23,7 @@ cd disqus2duoshuo.js
 npm install
 ```
 
-## XML to JSON
+### 4、XML to JSON
 
 ```sh
 node disqus2duoshuo.js xxxx.xml
@@ -29,7 +31,7 @@ node disqus2duoshuo.js xxxx.xml
 
 转换成功后，你会在 `disqus2duoshuo.js/` 目录内看到一个 JSON 文件
 
-## 导入到多说网
+### 5、导入到多说网
 
 登录多说开发者中心 <http://dev.duoshuo.com/>，按照步骤操作：
 

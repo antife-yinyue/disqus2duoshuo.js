@@ -5,7 +5,7 @@ var moment = require('moment')
 
 if (!process.argv[2]) {
   console.log('请指定XML文件路径')
-  return false
+  return
 }
 
 // 获取 XML 文件的全路径
@@ -40,6 +40,7 @@ fs.readFile(xmlPath, function(err, xmlData) {
   })
 
   disqus.post.forEach(function(data) {
+    // 不导入已删除和已过滤的评论
     if (data.isDeleted === 'false' && data.isSpam === 'false') {
       duoshuo.posts.push({
         post_key: data['dsq:id'],

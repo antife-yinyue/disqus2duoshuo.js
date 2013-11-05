@@ -1,11 +1,11 @@
 {
   "name": "disqus2duoshuo",
-  "description": "import comments from DISQUS to DuoShuo",
+  "description": "Import comments from DISQUS to DuoShuo",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "xml2json": "~> 0.3.2",
-    "moment": "~> 2.0.0"
+    "xml2json": "0.3.2",
+    "moment": "2.4.0"
   },
   "author": {
     "name": "wǒ_is神仙",
